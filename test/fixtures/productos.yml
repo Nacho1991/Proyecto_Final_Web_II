@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Authtoken: MyString
+  Nombre: MyString
+  Descripciono: MyString
+  Estado: MyString
+
+two:
+  Authtoken: MyString
+  Nombre: MyString
+  Descripciono: MyString
+  Estado: MyString
