@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Authtoken:</strong>
+  <%= @usuario.authtoken %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @usuario.nombre %>
+</p>
+
+<p>
+  <strong>Apellidos:</strong>
+  <%= @usuario.apellidos %>
+</p>
+
+<p>
+  <strong>Nombre usuario:</strong>
+  <%= @usuario.nombre_usuario %>
+</p>
+
+<p>
+  <strong>Contrasenna:</strong>
+  <%= @usuario.contrasenna %>
+</p>
+
+<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+<%= link_to 'Back', usuarios_path %>

@@ -1,942 +1,18 @@
 
 
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:16:44 -0600
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.9ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (27.1ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (54.7ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:18:14 -0600
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.7ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.7ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:18:15 -0600
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.5ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (31.4ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:18:16 -0600
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.0ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (31.6ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:18:54 -0600
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.9ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.7ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (29.7ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:18:55 -0600
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (16.7ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (31.7ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:19:00 -0600
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.8ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (28.4ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:19:27 -0600
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.8ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.2ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:19:28 -0600
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.6ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.6ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (33.4ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:19:28 -0600
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.5ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.7ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.7ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:20:33 -0600
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.8ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.6ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:20:34 -0600
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.6ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.5ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (31.5ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:20:34 -0600
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
-  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
-  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (29.5ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:21:03 -0600
+Started GET "/" for 127.0.0.1 at 2015-04-09 23:57:56 -0600
 Processing by Rails::WelcomeController#index as HTML
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
-Completed 200 OK in 19ms (Views: 10.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:22:32 -0600
-Processing by Rails::WelcomeController#index as HTML
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
-Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-07 16:50:33 -0600
-Processing by Rails::WelcomeController#index as HTML
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
-Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
-  [1m[36m (3.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
-  [1m[35m (11.5ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
-  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
-Migrating to CreateUsuarios (20150409051854)
-  [1m[35m (3.2ms)[0m  CREATE TABLE `usuarios` (`id` int(11) auto_increment PRIMARY KEY, `Nombre` varchar(255), `Apellidos` varchar(255), `Nombre_Usuario` varchar(255), `contrasenna` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (4.6ms)
+Completed 200 OK in 21ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (11.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsuarios (20150410060003)
+  [1m[35m (2.9ms)[0m  CREATE TABLE `usuarios` (`id` int(11) auto_increment PRIMARY KEY, `authtoken` varchar(255), `nombre` varchar(255), `apellidos` varchar(255), `nombre_usuario` varchar(255), `contrasenna` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
-  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150409051854')
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150410060003')
   [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
-Migrating to CreateProductos (20150409052430)
-  [1m[35m (3.0ms)[0m  CREATE TABLE `productos` (`id` int(11) auto_increment PRIMARY KEY, `Authtoken` varchar(255), `Nombre` varchar(255), `Descripciono` varchar(255), `Estado` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
-  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
-  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150409052430')
-  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
-  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
-      ,fk.referenced_column_name as 'primary_key'
-      ,fk.column_name as 'column'
-      ,fk.constraint_name as 'name'
-FROM information_schema.key_column_usage fk
-WHERE fk.referenced_column_name is not null
-  AND fk.table_schema = 'dbProyectoFinal'
-  AND fk.table_name = 'productos'
-[0m
-  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `productos`
   [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
       ,fk.referenced_column_name as 'primary_key'
       ,fk.column_name as 'column'
@@ -949,232 +25,48 @@ WHERE fk.referenced_column_name is not null
   [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `usuarios`
 
 
-Started GET "/" for 127.0.0.1 at 2015-04-08 23:49:06 -0600
-  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Started GET "/" for 127.0.0.1 at 2015-04-10 00:02:42 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
 Processing by Rails::WelcomeController#index as HTML
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
-Completed 200 OK in 18ms (Views: 10.8ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/producto/index" for 127.0.0.1 at 2015-04-08 23:54:38 -0600
-  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
-Processing by ProductoController#index as HTML
-  Rendered producto/index.html.erb within layouts/application (1.5ms)
-Completed 200 OK in 635ms (Views: 626.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/assets/producto-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-08 23:54:39 -0600
-
-
-Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-04-08 23:54:39 -0600
-
-
-Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-08 23:54:39 -0600
-
-
-Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-08 23:54:39 -0600
-
-
-Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-08 23:54:39 -0600
-
-
-Started GET "/assets/producto-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-08 23:54:39 -0600
-
-
-Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-04-08 23:54:39 -0600
-
-
-Started GET "/producto/index" for 127.0.0.1 at 2015-04-08 23:55:34 -0600
-Processing by ProductoController#index as HTML
-  Rendered producto/index.html.erb within layouts/application (0.4ms)
-Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/assets/producto-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-08 23:55:34 -0600
-
-
-Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-04-08 23:55:34 -0600
-
-
-Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-08 23:55:34 -0600
-
-
-Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-08 23:55:34 -0600
-
-
-Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-08 23:55:34 -0600
-
-
-Started GET "/assets/producto-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-08 23:55:34 -0600
-
-
-Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-04-08 23:55:34 -0600
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-09 00:00:07 -0600
-
-SyntaxError (/home/ignacio/Escritorio/Proyecto_Final_Web_II/app/controllers/home_controller.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
-  --Definimos un metodo Index para cargar la vista
-                ^):
-  app/controllers/home_controller.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
-
-
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (20.8ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (47.6ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-09 00:00:28 -0600
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.3ms)
-Completed 200 OK in 198ms (Views: 197.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 00:00:29 -0600
-
-
-Started GET "/assets/producto-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 00:00:29 -0600
-
-
-Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-04-09 00:00:29 -0600
-
-
-Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-09 00:00:29 -0600
-
-
-Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-09 00:00:29 -0600
-
-
-Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 00:00:29 -0600
-
-
-Started GET "/assets/producto-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 00:00:29 -0600
-
-
-Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-09 00:00:29 -0600
-
-
-Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-09 00:00:29 -0600
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-09 00:01:03 -0600
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.5ms)
-Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 00:01:04 -0600
-
-
-Started GET "/assets/producto-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 00:01:04 -0600
-
-
-Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-09 00:01:04 -0600
-
-
-Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-09 00:01:04 -0600
-
-
-Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 00:01:04 -0600
-
-
-Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-09 00:01:04 -0600
-
-
-Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-04-09 00:01:04 -0600
-
-
-Started GET "/assets/producto-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 00:01:04 -0600
-
-
-Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-09 00:01:04 -0600
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-09 00:03:07 -0600
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.0ms)
-Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 00:03:07 -0600
-
-
-Started GET "/assets/producto-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 00:03:07 -0600
-
-
-Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-04-09 00:03:07 -0600
-
-
-Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-09 00:03:07 -0600
-
-
-Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-09 00:03:07 -0600
-
-
-Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-09 00:03:07 -0600
-
-
-Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 00:03:07 -0600
-
-
-Started GET "/assets/producto-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 00:03:07 -0600
-
-
-Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-09 00:03:07 -0600
-
-
-Started GET "/" for 127.0.0.1 at 2015-04-09 01:02:14 -0600
-Processing by HomeController#index as HTML
-  Rendered home/index.html.erb within layouts/application (0.1ms)
-Completed 200 OK in 207ms (Views: 206.5ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 01:02:14 -0600
-
-
-Started GET "/assets/producto-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 01:02:14 -0600
-
-
-Started GET "/assets/usuario-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 01:02:14 -0600
-
-
-Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-04-09 01:02:14 -0600
-
-
-Started GET "/assets/producto-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:02:14 -0600
-
-
-Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-09 01:02:14 -0600
-
-
-Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-09 01:02:14 -0600
-
-
-Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-09 01:02:14 -0600
-
-
-Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:02:14 -0600
-
-
-Started GET "/assets/usuario-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:02:14 -0600
-
-
-Started GET "/assets/application-8ce5067598cd03bc722b97db5dd776ec.js?body=1" for 127.0.0.1 at 2015-04-09 01:02:14 -0600
-
-
-Started GET "/Producto/eliminar" for 127.0.0.1 at 2015-04-09 01:02:24 -0600
-
-ActionController::RoutingError (No route matches [GET] "/Producto/eliminar"):
-  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-10 00:03:52 -0600
+
+ActionController::RoutingError (uninitialized constant UsuarioController):
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:59:in `controller'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:38:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
   web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
   actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
@@ -1200,46 +92,201 @@ ActionController::RoutingError (No route matches [GET] "/Producto/eliminar"):
   /home/ignacio/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.0ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.4ms)
+  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.8ms)
+  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.1ms)
   Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
   Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.1ms)
+  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
-  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (28.8ms)
+  Rendered /home/ignacio/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (29.2ms)
 
 
-Started GET "/producto/eliminar" for 127.0.0.1 at 2015-04-09 01:02:32 -0600
-Processing by ProductoController#eliminar as HTML
-  Rendered producto/eliminar.html.erb within layouts/application (0.4ms)
-Completed 200 OK in 50ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2015-04-10 00:04:10 -0600
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.6ms)[0m  SELECT `usuarios`.* FROM `usuarios`
+  Rendered usuarios/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 671ms (Views: 665.7ms | ActiveRecord: 2.4ms)
 
 
-Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 01:02:32 -0600
+Started GET "/assets/scaffolds-26297c0da1684341fa66ff1a6f31eb3d.css?body=1" for 127.0.0.1 at 2015-04-10 00:04:10 -0600
 
 
-Started GET "/assets/producto-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-09 01:02:32 -0600
+Started GET "/assets/usuarios-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-10 00:04:10 -0600
 
 
-Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-04-09 01:02:32 -0600
+Started GET "/assets/application-02e877f0b7576fbc1f6949d1c0b4d481.css?body=1" for 127.0.0.1 at 2015-04-10 00:04:11 -0600
 
 
-Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-09 01:02:32 -0600
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-10 00:04:11 -0600
 
 
-Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-09 01:02:32 -0600
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-10 00:04:11 -0600
 
 
-Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-09 01:02:32 -0600
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-10 00:04:11 -0600
 
 
-Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:02:32 -0600
+Started GET "/assets/usuarios-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-10 00:04:11 -0600
 
 
-Started GET "/assets/producto-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-09 01:02:32 -0600
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-04-10 00:04:11 -0600
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2015-04-10 00:04:12 -0600
+Processing by UsuariosController#new as HTML
+  Rendered usuarios/_form.html.erb (9.3ms)
+  Rendered usuarios/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 61ms (Views: 49.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2015-04-10 00:04:23 -0600
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dyXseTIObsBm4RdfV5tBqcx8nV4W5I34kogbooMYaoiOSR4d4TY4N8ORSzvKeM8W2lVOk5048PnLnAkeKslGOw==", "usuario"=>{"authtoken"=>"21", "nombre"=>"eqwe", "apellidos"=>"qweq", "nombre_usuario"=>"eqwe", "contrasenna"=>"eqwe"}, "commit"=>"Create Usuario"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO `usuarios` (`authtoken`, `nombre`, `apellidos`, `nombre_usuario`, `contrasenna`, `created_at`, `updated_at`) VALUES ('21', 'eqwe', 'qweq', 'eqwe', 'eqwe', '2015-04-10 06:04:23.853651', '2015-04-10 06:04:23.853651')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2015-04-10 00:04:23 -0600
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 LIMIT 1
+  Rendered usuarios/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 50ms (Views: 40.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-10 00:04:24 -0600
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-10 00:04:24 -0600
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-10 00:04:24 -0600
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-04-10 00:04:24 -0600
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2015-04-10 00:04:27 -0600
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.7ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios`[0m
+  Rendered usuarios/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProductos (20150410060639)
+  [1m[35m (5.4ms)[0m  CREATE TABLE `productos` (`id` int(11) auto_increment PRIMARY KEY, `nombre` varchar(255), `descripcion` varchar(255), `estado` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150410060639')
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'dbProyectoFinal'
+  AND fk.table_name = 'productos'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `productos`
+  [1m[36m (0.5ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'dbProyectoFinal'
+  AND fk.table_name = 'usuarios'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `usuarios`
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2015-04-10 00:06:54 -0600
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios`[0m
+  Rendered usuarios/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 220ms (Views: 215.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/productos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-10 00:06:55 -0600
+
+
+Started GET "/assets/usuarios-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-10 00:06:55 -0600
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-10 00:06:55 -0600
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-10 00:06:55 -0600
+
+
+Started GET "/assets/scaffolds-26297c0da1684341fa66ff1a6f31eb3d.css?body=1" for 127.0.0.1 at 2015-04-10 00:06:55 -0600
+
+
+Started GET "/assets/application-02e877f0b7576fbc1f6949d1c0b4d481.css?body=1" for 127.0.0.1 at 2015-04-10 00:06:55 -0600
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-10 00:06:55 -0600
+
+
+Started GET "/assets/productos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-10 00:06:55 -0600
+
+
+Started GET "/assets/usuarios-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-10 00:06:55 -0600
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-10 00:06:55 -0600
+
+
+Started GET "/productos" for 127.0.0.1 at 2015-04-10 00:06:57 -0600
+Processing by ProductosController#index as HTML
+  [1m[35mProducto Load (0.3ms)[0m  SELECT `productos`.* FROM `productos`
+  Rendered productos/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 57ms (Views: 53.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/scaffolds-26297c0da1684341fa66ff1a6f31eb3d.css?body=1" for 127.0.0.1 at 2015-04-10 00:06:57 -0600
+
+
+Started GET "/assets/usuarios-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-10 00:06:57 -0600
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-10 00:06:57 -0600
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-10 00:06:57 -0600
+
+
+Started GET "/assets/usuarios-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-10 00:06:57 -0600
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-10 00:06:57 -0600
+
+
+Started GET "/assets/application-02e877f0b7576fbc1f6949d1c0b4d481.css?body=1" for 127.0.0.1 at 2015-04-10 00:06:57 -0600
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for 127.0.0.1 at 2015-04-10 00:06:57 -0600
+
+
+Started GET "/productos/new" for 127.0.0.1 at 2015-04-10 00:06:59 -0600
+Processing by ProductosController#new as HTML
+  Rendered productos/_form.html.erb (2.9ms)
+  Rendered productos/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 59ms (Views: 54.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/productos" for 127.0.0.1 at 2015-04-10 00:07:05 -0600
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (0.4ms)[0m  [1mSELECT `productos`.* FROM `productos`[0m
+  Rendered productos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.4ms)

@@ -11,21 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150409052430) do
+ActiveRecord::Schema.define(version: 20150410060639) do
 
   create_table "productos", force: :cascade do |t|
-    t.string   "Authtoken",    limit: 255
-    t.string   "Nombre",       limit: 255
-    t.string   "Descripciono", limit: 255
-    t.string   "Estado",       limit: 255
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "nombre",      limit: 255
+    t.string   "descripcion", limit: 255
+    t.string   "estado",      limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "usuarios", force: :cascade do |t|
-    t.string   "Nombre",         limit: 255
-    t.string   "Apellidos",      limit: 255
-    t.string   "Nombre_Usuario", limit: 255
+    t.string   "authtoken",      limit: 255
+    t.string   "nombre",         limit: 255
+    t.string   "apellidos",      limit: 255
+    t.string   "nombre_usuario", limit: 255
     t.string   "contrasenna",    limit: 255
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
