@@ -1,0 +1,15 @@
+<%= form_tag sessions_path,method: :post do %>
+<div class="field">
+	<%= label_tag :username %>
+	<br />
+	<%= text_field_tag :username%>
+</div>
+<div class="field">
+	<%= label_tag :password %>
+	<br />
+	<%= text_field_tag :pass%>
+</div>
+<div class="actions">
+	<%= submit_tag %>
+</div>
+<% end%>
