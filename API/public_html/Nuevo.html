@@ -44,29 +44,39 @@
             </nav>
 
             <div class="jumbotron">
-                <h2>Registrar producto</h2>                
-                <div class="form-inline" role="form">
-                    <div class="form-group">
-                        <label class="sr-only" for="nombre">Nombre:</label>
-                        <input type="text" class="form-control" id="nombre">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="pwd">Password:</label>
-                        <input type="password" class="form-control" id="pwd">
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Estado
-                            <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
-                            <li role="presentation" class="divider"></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
-                        </ul>
-                    </div>
-                    <button id="registrar" name="registrar" type="button" class="btn btn-default">Registrar</button>
-                </div>
+                <fieldset>
+                    <legend>Registrar producto</legend>
+                    <form action="http://localhost:3000/productos/create" id="producto" method="post" accept-charset="utf-8">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label for="token">N° Token:</label>
+                                <input type="text" class="form-control" id="token">
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcion">Descripción:</label>
+                                <input type="text" class="form-control" id="descripcion">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="estado">Estado:</label> 
+                                <select class="form-control" id="estado">
+                                    <option value="activo">Activo</option>
+                                    <option value="inactivo">Inactivo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input id="registrar" name="registrar" type="button" class="btn btn-primary" value="Registrar">
+                                <button id="limpiar" name="limpiar" type="button" class="btn btn-success">Limpiar campos</button>
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+            <div id="respuesta">
+
             </div>
         </div>
         <div class="container">
@@ -78,5 +88,22 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            $("#limpiar").click(function () {
+                $('#token').val("");
+                $('#descripcion').val("");
+                $('#nombre').val("");
+            });</script>
+        <script>
+            $("#registrar").click(function (event) {
+                $.post(
+                        "http://localhost:3000/productos/create",
+                        {nombre: "txt", descripcion: "das", estado: "dasd"},
+                function (data, status, xhr) {
+                    debugger;
+                    $("#respuesta").html(data);
+                });
+            });
+        </script>
     </body>
 </html>

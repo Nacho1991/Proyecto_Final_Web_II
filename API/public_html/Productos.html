@@ -48,6 +48,7 @@
                 <a href="Nuevo.html"><button class="btn btn-primary">Nuevo</button></a>
                 <br>
                 <br>
+                <textarea readonly="" id="result" class="form-control" rows="1"></textarea>
                 <div>
                     <table class="table table-bordered">
                         <thead>
@@ -80,8 +81,9 @@
 
         <script>
             $(function () {
-                $.get("http://localhost:3000/productos.json", function (msg)
+                var request = $.get("http://localhost:3000/productos.json", function (msg,estado,jqXHR)
                 {
+                    debugger;
                     $("#tbody").append("<tr></tr>");
                     for (var pos = 0; pos < Object.keys(msg).length; pos++) {
                         var table = "<tr>";
@@ -96,6 +98,11 @@
                         table += "</tr>";
                         $("#tbody").append(table);
                     }
+
+                });
+                request.done(function (msg,estado,jqXHR) {
+                    debugger;
+                    $('#result').val("Código: "+JSON.stringify(jqXHR['status']));
                 });
             });
         </script>
