@@ -45,7 +45,8 @@ class ProductosController < ApplicationController
   # POST /productos.json
   def create
     @producto = Producto.new(producto_params)
-
+    
+ 
     respond_to do |format|
       if @producto.save
         format.html { redirect_to @producto, notice: 'Producto creado satisfactoriamente' }
