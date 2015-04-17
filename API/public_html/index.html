@@ -21,6 +21,8 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="js/vendor/jquery-1.11.2.js"></script>
+        <script src="js/vendor/angular.js/angular-resource.js"></script>
+        <script src="js/vendor/angular.js/angular.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -90,12 +92,27 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
-
         <script>
             $("#iniciarsesion").click(function () {
-
-                alert("Sesión iniciada");
-
+                var usuario = $("#nombreusuario").val();
+                var contrasenna = $("#contrasenna").val();
+                $.ajax({
+                    url: "http://localhost:3000/users/authenticate",
+                    accepts: "",
+                    method: "POST",
+                    data: {"user": usuario, "password": contrasenna},
+                    dataType: 'json',
+                    success: function (datos, msgDescripcion, jqXHR) {
+                        localStorage.setItem('Token', datos['authToken']);
+                        $("#nombreusuario").val("");
+                        $("#contrasenna").val("");
+                        location.href = "";
+                    },
+                    error: function (datos, msgDescripcion, jqXHR) {
+                        debugger;
+                        alert("Código: " + JSON.stringify(datos['responseText'] + " " + jqXHR));
+                    }
+                });
             });
         </script>
     </body>

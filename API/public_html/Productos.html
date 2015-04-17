@@ -58,6 +58,7 @@
                                 <th>N° Registro</th>
                                 <th>Nombre</th>
                                 <th>Descripción</th>
+                                <th>Precio</th>
                                 <th>Estado</th>
                                 <th>Opciones</th>
                             </tr>
@@ -104,16 +105,12 @@
                             <input name="nombre" readonly="" id="descripciondetalles" type="text" class="form-control" value="">
                         </div>
                         <div class="form-group">
+                            <label for="pricedetalles">Precio:</label>
+                            <input name="nombre" readonly="" id="pricedetalles" type="text" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
                             <label for="estadodetalles">Estado</label>
                             <input name="nombre" readonly="" id="estadodetalles" type="text" class="form-control" value="">
-                        </div>
-                        <div class="form-group">
-                            <label for="creaciondetalles">Fecha de creación</label>
-                            <input name="nombre" readonly="" id="creaciondetalles" type="text" class="form-control" value="">
-                        </div>
-                        <div class="form-group">
-                            <label for="modificaciondetalles">Fecha de modificación:</label>
-                            <input name="nombre" readonly="" id="modificaciondetalles" type="text" class="form-control" value="">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -122,54 +119,86 @@
                 </div>
             </div>
         </div>
-        <script>
-            $("#verdetalles").bind("click", function () {
-                var id = "1";
-                var request = $.get("http://localhost:3000/productos/" + id + ".json", function (msg, estado, jqXHR) {
-                    debugger;
-                    for (var pos = 0; pos < Object.keys(msg).length; pos++) {
-                        $("#creaciondetalles").val(msg.created_at);
-                        $("#descripciondetalles").val(msg.descripcion);
-                        $("#estadodetalles").val(msg.estado);
-                        $("#registrodetalles").val(msg.id);
-                        $("#nombredetalles").val(msg.nombre);
-                        $("#modificaciondetalles").val(msg.updated_at);
-                    }
-                });
-                request.done(function (msg, estado, jqXHR) {
-                    $('#resultdetalles').val("Código: " + JSON.stringify(jqXHR['status'] + " " + estado));
-                });
-                $("#detallesmodal").modal({
-                    show: true
-                });
-            });
-        </script>
-        <script>
-            $(function () {
-                var request = $.get("http://localhost:3000/productos.json", function (msg, estado, jqXHR)
-                {
-                    debugger;
-                    $("#tbody").append("<tr></tr>");
-                    for (var pos = 0; pos < Object.keys(msg).length; pos++) {
-                        var table = "<tr>";
-                        table += "<td>" + msg[pos].id + "</td>";
-                        table += "<td>" + msg[pos].nombre + "</td>";
-                        table += "<td>" + msg[pos].descripcion + "</td>";
-                        table += "<td>" + msg[pos].estado + "</td>";
-                        table += "<td>" +
-                                "<button class='btn btn-primary' id=verdetalles name=" + msg[pos].id + ">Detalles</button>" +
-                                "<button  class='btn btn-success' id=detallesactualizar name=" + msg[pos].id + ">Actualizar</button>" +
-                                "<button  class='btn btn-danger' id=detalleseliminar name=" + msg[pos].id + ">Eliminar</button>"
-                                + "</td>";
-                        table += "</tr>";
-                        $("#tbody").append(table);
-                    }
-                });
-                request.done(function (msg, estado, jqXHR) {
-                    $('#result').val("Código: " + JSON.stringify(jqXHR['status'] + " " + estado));
-                });
-            });
 
+        <script>
+            $(document).ready(function () {
+                cargarProductos();
+                function verDetalles() {
+                    var token = localStorage.getItem('Token');
+                    $("#verdetalles").bind("click", function () {
+                        var id = $(this).attr("name");
+                        $.ajax({
+                            url: "http://localhost:3000/products/" + id,
+                            type: 'GET',
+                            accepts: "",
+                            headers: {Authorization: 'Token token=' + token},
+                            success: function (data, textStatus, jqXHR) {
+                                for (var pos = 0; pos < Object.keys(data).length; pos++) {
+                                    $("#registrodetalles").val(data.id);
+                                    $("#nombredetalles").val(data.name);
+                                    $("#descripciondetalles").val(data.description);
+                                    $("#pricedetalles").val(data.price);
+                                    if (data.state === true) {
+                                        $("#estadodetalles").val("Activo");
+                                    } else {
+                                        $("#estadodetalles").val("Inactivo");
+                                    }
+                                }
+                                $('#resultdetalles').val("Código: " + JSON.stringify(jqXHR['status'] + " " + textStatus));
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
+                                $('#resultdetalles').val("Código: " + JSON.stringify(jqXHR['status'] + " " + textStatus));
+                            }
+                        });
+                        $("#detallesmodal").modal({
+                            show: true
+                        });
+                    });
+                }
+
+                function cargarProductos() {
+                    var token = localStorage.getItem('Token');
+                    $.ajax({
+                        url: "http://localhost:3000/products",
+                        type: 'GET',
+                        accepts: "",
+                        headers: {Authorization: 'Token token=' + token},
+                        success: function (data, textStatus, jqXHR) {
+                            $('#result').val("Código: " + JSON.stringify(jqXHR['status'] + " " + textStatus));
+                            $("#tbody").append("<tr></tr>");
+                            var estado = null;
+                            for (var pos = 0; pos < Object.keys(data).length; pos++) {
+                                if (data[pos].state === true) {
+                                    estado = "<center><span class='glyphicon glyphicon-ok' aria-hidden='true'>" +
+                                            "<span class='glyphicon-class'></span>"
+                                            + "</span></center>";
+                                } else {
+                                    estado = "<center><span class='glyphicon glyphicon-remove' aria-hidden='true'>" +
+                                            "<span class='glyphicon-class'></span>"
+                                            + "</span></center>";
+                                }
+                                var table = "<tr>";
+                                table += "<td>" + data[pos].id + "</td>";
+                                table += "<td>" + data[pos].name + "</td>";
+                                table += "<td>" + data[pos].description + "</td>";
+                                table += "<td>" + data[pos].price + "</td>";
+                                table += "<td>" + estado + "</td>";
+                                table += "<td>" +
+                                        "<button class='btn btn-primary' id=verdetalles name=" + data[pos].id + ">Detalles</button>" +
+                                        "<button  class='btn btn-success' id=detallesactualizar name=" + data[pos].id + ">Actualizar</button>" +
+                                        "<button  class='btn btn-danger' id=detalleseliminar name=" + data[pos].id + ">Eliminar</button>"
+                                        + "</td>";
+                                table += "</tr>";
+                                $("#tbody").append(table);
+                            }
+                            verDetalles();
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            $('#result').val("Código: " + JSON.stringify(jqXHR['status'] + " " + textStatus));
+                        }
+                    });
+                }
+            });
         </script>
     </body>
 </html>

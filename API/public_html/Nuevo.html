@@ -51,10 +51,6 @@
                             <textarea readonly="" id="result" class="form-control" rows="1"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="token">N° Token:</label>
-                            <input type="text" class="form-control" id="token">
-                        </div>
-                        <div class="form-group">
                             <label for="nombre">Nombre:</label>
                             <input type="text" class="form-control" id="nombre">
                         </div>
@@ -63,10 +59,14 @@
                             <input type="text" class="form-control" id="descripcion">
                         </div>
                         <div class="form-group">
+                            <label for="precio">Precio:</label>
+                            <input type="text" class="form-control" id="precio">
+                        </div>
+                        <div class="form-group">
                             <label class="control-label" for="estado">Estado:</label> 
                             <select class="form-control" id="estado">
-                                <option value="Activo">Activo</option>
-                                <option value="Inactivo">Inactivo</option>
+                                <option value="true">Activo</option>
+                                <option value="false">Inactivo</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -76,9 +76,6 @@
                         </div>
                     </div>
                 </fieldset>
-            </div>
-            <div id="respuesta">
-
             </div>
         </div>
         <div class="container">
@@ -92,33 +89,44 @@
         <script src="js/main.js"></script>
         <script>
             $("#limpiar").click(function () {
-                $('#token').val("");
-                $('#descripcion').val("");
                 $('#nombre').val("");
+                $('#descripcion').val("");
+                $('#precio').val("");
             });</script>
         <script>
             $("#registrar").click(function () {
-                debugger;
+                var token = localStorage.getItem('Token');
                 var nombre = $("#nombre").val();
                 var descripcion = $("#descripcion").val();
+                var precio = $("#precio").val();
                 var estado = $("#estado").val();
-                $.ajax({
-                    url: "http://localhost:3000/productos.json",
-                    accepts: "",
-                    method: "POST",
-                    data: {"producto": {"nombre": nombre, "descripcion": descripcion, "estado": estado}},
-                    dataType: 'json',
-                    success: function (data, msgDescripcion, jqXHR) {
-                        debugger;
-                        $('#result').val("Código: " + JSON.stringify(jqXHR['status'] + " " + msgDescripcion));
-                        $('#token').val("");
-                        $('#descripcion').val("");
-                        $('#nombre').val("");
-                    },
-                    error: function (data, msgDescripcion, jqXHR) {
-                        $('#result').val("Código: " + JSON.stringify(jqXHR['status'] + " " + msgDescripcion));
-                    }
-                });
+                if (estado === "false") {
+                    estado = false;
+                } else {
+                    estado = true;
+                }
+                if (nombre === "" || descripcion === "" || precio === "" || estado === "") {
+                    alert("Faltan datos importantes");
+                } else {
+                    $.ajax({
+                        url: "http://localhost:3000/products",
+                        accepts: "",
+                        method: "POST",
+                        headers: {Authorization: 'Token token=' + token},
+                        data: {"product": {"name": nombre, "description": descripcion, "price": precio, "state": estado}},
+                        dataType: 'json',
+                        success: function (data, textStatus, jqXHR) {
+                            $('#token').val("");
+                            $('#descripcion').val("");
+                            $('#nombre').val("");
+                            $('#precio').val("");
+                            $('#result').val("Código: " + JSON.stringify(jqXHR['status'] + " " + textStatus));
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            $('#result').val("Código: " + JSON.stringify(jqXHR['status'] + " " + textStatus));
+                        }
+                    });
+                }
             });
         </script>
     </body>
