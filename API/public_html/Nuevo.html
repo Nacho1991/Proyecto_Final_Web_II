@@ -65,8 +65,8 @@
                         <div class="form-group">
                             <label class="control-label" for="estado">Estado:</label> 
                             <select class="form-control" id="estado">
-                                <option value="true">Activo</option>
-                                <option value="false">Inactivo</option>
+                                <option value="1">Activo</option>
+                                <option value="0">Inactivo</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -100,10 +100,10 @@
                 var descripcion = $("#descripcion").val();
                 var precio = $("#precio").val();
                 var estado = $("#estado").val();
-                if (estado === "false") {
-                    estado = false;
-                } else {
-                    estado = true;
+                if (estado === "false" || estado === "0") {
+                    estado = 0;
+                } else if (estado === "true" || estado === "1") {
+                    estado = 1;
                 }
                 if (nombre === "" || descripcion === "" || precio === "" || estado === "") {
                     alert("Faltan datos importantes");
